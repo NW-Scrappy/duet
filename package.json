@@ -1,0 +1,25 @@
+{
+  "name": "duet-1",
+  "version": "1.0.0",
+  "description": "create server file create package.json outside the client directory install dependencies - mysql2, express, sequelize, dotenv sync local db with models creating model for bands  create routes back to frontend create local db create config file create table and columns under model",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NW-Scrappy/duet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NW-Scrappy/duet/issues"
+  },
+  "homepage": "https://github.com/NW-Scrappy/duet#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  }
+}
