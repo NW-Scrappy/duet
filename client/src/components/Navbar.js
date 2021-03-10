@@ -20,13 +20,13 @@ function Navbar() {
             <a className="nav-link" href="/Dashboard">Dashboard</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/My-Profile">My Profile</a>
+            <a className="nav-link" href="/Profile">Profile</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/Band-search">I need a band!</a>
+            <a className="nav-link" href="/BandSearch">I need a band!</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/Musician-search">I need a Musician!</a>
+            <a className="nav-link" href="/MusicianSearch">I need a Musician!</a>
           </li>
         </ul>
       </nav>
