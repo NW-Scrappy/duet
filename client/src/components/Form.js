@@ -1,6 +1,6 @@
 import React from "react"
 
-function MusicianSearch() {
+function Form() {
     return (
         <Container fluid>
           <Row>
@@ -59,4 +59,4 @@ function MusicianSearch() {
     }
 
 
-export default MusicianSearch
+export default Form;
