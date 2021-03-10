@@ -17,13 +17,16 @@ function Navbar() {
       <nav className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="nav navbar-nav navbar-right">
           <li className="nav-item">
-            <a className="nav-link" href="/Contact">Placeholder</a>
+            <a className="nav-link" href="/Dashboard">Dashboard</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/Portfolio">Placeholder</a>
+            <a className="nav-link" href="/My-Profile">My Profile</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/AboutMe">Placeholder</a>
+            <a className="nav-link" href="/Band-search">I need a band!</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/Musician-search">I need a Musician!</a>
           </li>
         </ul>
       </nav>
