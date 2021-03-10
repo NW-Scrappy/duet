@@ -16,6 +16,55 @@ app.use(express.json());
 // Add routes, both API and view
 // app.use(routes);
 app.get("/", (req, res) => res.send("index"));
+
+
+
+  // Find all bands and return them to the user with res.json
+  app.get("/api/band", function (req, res) {
+    db.Band.findAll({})
+      .then(function (dbBand) {
+        res.json(dbBand);
+      });
+
+  });
+
+app.get("/api/band/:id", function (req, res) {
+  // Find one Band with the id in req.params.id and return them to the user with res.json
+  db.Band.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function (dbBand) {
+    res.json(dbBand);
+  });
+});
+
+app.get("/api/:instrument", function (req, res) {
+  if (req.params.instrument) {
+    // Display the JSON for ONLY that character.
+
+    db.Band.findAll({
+      where: {
+        instrument_seeking: req.params.instrument
+      }
+    }).then(function (dbBand) {
+      return res.json(dbBand);
+    });
+    // } else {
+    //     Band.findAll({
+    //         where: {
+    //             instrument_seeking: req.params.band
+    //         }
+    //     }).then(function (dbBand) {
+    //         return res.json(dbBand);
+    //     });
+    //     console.log("instrument", dbBand)
+    // }
+  }
+})
+
+
+
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
 db.sequelize.sync({ force: false }).then(() => {
