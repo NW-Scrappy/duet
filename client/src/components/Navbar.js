@@ -9,7 +9,7 @@ import FormControl from "react-bootstrap/FormControl"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-info">
+        <nav  className="navbar navbar-expand-lg navbar-dark bg-info">
       <span className="navbar-brand mb-1 h1">placeholder</span>
       <button
         className="navbar-toggler"
