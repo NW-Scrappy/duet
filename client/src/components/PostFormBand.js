@@ -5,13 +5,27 @@ import Col from "react-bootstrap/Col"
 import Button from 'react-bootstrap/Button';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
+import axios from "axios";
 
 
 const PostForm = () => {
     const [bandName, setBandName] = useState("")
     const [instrument, setInstrument] = useState("")
-    const [genre, setgenre] = useState("")
 
+    const [genre, setGenre] = useState("")
+    const [location, setLocation] = useState("")
+
+    const handleChange = () => {
+        axios
+            .post("http://localhost:5000/api/insert", {
+                bandName: bandName,
+                instrument: instrument,
+                genre: genre,
+            })
+            .then(() => {
+                alert("successful insert");
+            });
+    };
     
 
 
@@ -35,7 +49,8 @@ const PostForm = () => {
                             placeholder="Band Name"
                             // value={bandName.firstName}
                             onChange={(e) => {
-                            console.log(e.target.value)
+                                console.log(e.target.value)
+                                setBandName(e.target.value)
                             }}
                                 
                         />
@@ -45,24 +60,27 @@ const PostForm = () => {
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Instrument Seeking</Form.Label>
                         <Form.Control onChange={(e) => {
-                            console.log(e.target.defaultValue)
-                            }}
+                            console.log(e.target.value)
+                            setInstrument(e.target.value)
+                        }}
+                        
                             as="select" defaultValue="Choose...">
                             <option>Choose...</option>
-                            <option>Accordion</option>
-                            <option>Acoustic Guitar</option>
-                            <option> Flute</option>
-                            <option>Clarinet</option>
-                            <option>Saxophone</option>
-                            <option>Drums</option>
-                            <option>Rhythm Guitar</option>
-                            <option>Lead Guitar</option>
-                            <option>Bass Guitar</option>
-                            <option>Cello</option>
-                            <option>Fiddle/Violin</option>
-                            <option>Trumpet</option>
-                            <option>Ukelele</option>
 
+                            <option value="accordian">Accordion</option>
+                            <option value="acoutic">Acoustic Guitar</option>
+                            <option value="flute"> Flute</option>
+                            <option value="clarinet">Clarinet</option>
+                            <option value="saxophone">Saxophone</option>
+                            <option value="drum">Drums</option>
+                            <option value="electric">Electric Guitar</option>
+                            <option value="">...</option>
+                            <option value="">...</option>
+                            <option value="">...</option>
+                            <option value="">...</option>
+                            <option value="">...</option>
+                            <option value="">...</option>
+                      
                         </Form.Control>
                        
                         
@@ -74,6 +92,7 @@ const PostForm = () => {
                     <Form.Label>Music Genre</Form.Label>
                     <Form.Control onChange={(e) => {
                         console.log(e.target.value)
+                        setGenre(e.target.value)
                     }}
 
                         as="select" defaultValue="Choose...">
@@ -112,6 +131,7 @@ const PostForm = () => {
                     <Form.Group as={Col} controlId="formGridState">
                         <Form.Label>Location by State</Form.Label>
                         <Form.Control onChange={(e) => {
+                            setLocation(e.target.value)
                             console.log(e.target.value)
                         }}
                             as="select" defaultValue="Choose...">
@@ -144,6 +164,7 @@ const PostForm = () => {
                 <br></br>
                 <Button variant="primary" type="submit"
                     onClick={(e) => {
+                     
                         console.log("heelo",e)
                     }} 
                 >
