@@ -22,8 +22,7 @@ const PostForm = () => {
                 <Container>
                     <h1>Band Seeking Musician</h1>
                     <p>
-                        This is a modified jumbotron that occupies the entire horizontal space of
-                        its parent.
+                    This site is really for Fight Club. A underground secret fighting club. 
     </p>
                 </Container>
             </Jumbotron>
@@ -53,12 +52,15 @@ const PostForm = () => {
                             <option>Acoustic Guitar</option>
                             <option> Flute</option>
                             <option>Clarinet</option>
+                            <option>Brass Knuckles</option>
                             <option>Saxophone</option>
                             <option>Drums</option>
+                            <option>Switchblade</option>
                             <option>Rhythm Guitar</option>
                             <option>Lead Guitar</option>
                             <option>Bass Guitar</option>
                             <option>Cello</option>
+                            <option>Nunchucks</option>
                             <option>Fiddle/Violin</option>
                             <option>Trumpet</option>
                             <option>Ukelele</option>
