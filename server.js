@@ -3,11 +3,14 @@ const PORT = process.env.PORT || 5000;
 const db = require('./models');
 // const routes = require('./routes');
 const app = express();
+var cors = require('cors')
+
 
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors())
 // Serve up static assets (usually on heroku)
 // console.log(process.env.NODE_ENV);
 // if (environment === 'production') {
@@ -76,23 +79,28 @@ app.get("/api/musicians/:instrument", function (req, res) {
 })
 
 
-app.post('/api/post', (req, res) => {
-  const name = "the beatles";
-  const instrument = "flute";
-  const genre="rock"
+app.post('/api/post', function (req, res) {
+  const band_name = "the beatles";
+  const instrument_seeking = "flute";
+  const band_genre = "rock"
+
   // const role = req.body.band;
   db.Band.create({
-    band_name: name,
-    instrument_seeking:instrument,
-    band_genre: genre
+    band_name: band_name,
+    instrument_seeking:instrument_seeking,
+    band_genre: band_genre,
+   
     
     // role: role
   })
-    .then(newOwner => {
-      res.json(newOwner);
+    .then(dbBand => {
+      res.json(dbBand);
       console.log("hello")
     })
 });
+
+
+
 
 // Get musician with the requested id and return with res.json
 app.get("/api/musicianID/:id", function (req, res) {
