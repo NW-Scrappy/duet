@@ -66,6 +66,7 @@ const PostForm = () => {
                         
                             as="select" defaultValue="Choose...">
                             <option>Choose...</option>
+
                             <option value="accordian">Accordion</option>
                             <option value="acoutic">Acoustic Guitar</option>
                             <option value="flute"> Flute</option>
@@ -80,7 +81,6 @@ const PostForm = () => {
                             <option value="">...</option>
                             <option value="">...</option>
                       
-
                         </Form.Control>
                        
                         
