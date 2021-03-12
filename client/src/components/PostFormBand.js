@@ -15,21 +15,22 @@ const PostForm = () => {
     const [genre, setGenre] = useState("")
     const [location, setLocation] = useState("")
 
-    const handleChange = () => {
+    const handleChange = (e) => {
+        console.log("successful insert")
+        e.preventDefault()
         axios
             .post("http://localhost:5000/api/insert", {
                 bandName: bandName,
                 instrument: instrument,
                 genre: genre,
             })
+       
             .then(() => {
-                alert("successful insert");
+               alert ("successful insert");
             });
+        
     };
     
-
-
-
     return (
         <div>
             <Jumbotron fluid className="jumbotron">
@@ -163,10 +164,9 @@ const PostForm = () => {
 
                 <br></br>
                 <Button variant="primary" type="submit"
-                    onClick={(e) => {
+                    onClick={handleChange}
                      
-                        console.log("heelo",e)
-                    }} 
+                    
                 >
                     Submit Musician Search
                      

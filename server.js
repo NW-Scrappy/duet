@@ -75,6 +75,25 @@ app.get("/api/musicians/:instrument", function (req, res) {
   }
 })
 
+
+app.post('/api/post', (req, res) => {
+  const name = "the beatles";
+  const instrument = "flute";
+  const genre="rock"
+  // const role = req.body.band;
+  db.Band.create({
+    band_name: name,
+    instrument_seeking:instrument,
+    band_genre: genre
+    
+    // role: role
+  })
+    .then(newOwner => {
+      res.json(newOwner);
+      console.log("hello")
+    })
+});
+
 // Get musician with the requested id and return with res.json
 app.get("/api/musicianID/:id", function (req, res) {
 db.Musician.findOne({
