@@ -18,7 +18,11 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #17A2B8;
+  background-color: #0DCAF0;
   color: white;
   text-align: center;
 }
+
+/* .navbar {
+  background-color: #17A2B8;
+} */
