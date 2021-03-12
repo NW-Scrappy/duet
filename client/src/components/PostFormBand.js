@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "../App.css"
 import Form from 'react-bootstrap/Form';
 import Col from "react-bootstrap/Col"
@@ -7,7 +7,15 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 
 
- const PostForm = () => {
+const PostForm = () => {
+    const [bandName, setBandName] = useState("")
+    const [instrument, setInstrument] = useState("")
+    const [genre, setgenre] = useState("")
+
+    
+
+
+
     return (
         <div>
             <Jumbotron fluid className="jumbotron">
@@ -23,13 +31,23 @@ import Container from 'react-bootstrap/Container';
                 <Form.Row>
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Band Name</Form.Label>
-                        <Form.Control type="text" placeholder="Band Name" />
+                        <Form.Control type="text"
+                            placeholder="Band Name"
+                            // value={bandName.firstName}
+                            onChange={(e) => {
+                            console.log(e.target.value)
+                            }}
+                                
+                        />
                        <br></br>
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Instrument Seeking</Form.Label>
-                        <Form.Control as="select" defaultValue="Choose...">
+                        <Form.Control onChange={(e) => {
+                            console.log(e.target.defaultValue)
+                            }}
+                            as="select" defaultValue="Choose...">
                             <option>Choose...</option>
                             <option>Accordion</option>
                             <option>Acoustic Guitar</option>
@@ -44,34 +62,42 @@ import Container from 'react-bootstrap/Container';
                             <option>...</option>
                             <option>...</option>
                             <option>...</option>
+                      
 
                         </Form.Control>
+                       
+                        
                     </Form.Group>
                     <br></br>
                 </Form.Row>
 
                 <Form.Group controlId="formGridAddress1">
                     <Form.Label>Music Genre</Form.Label>
-                    <Form.Control as="select" defaultValue="Choose...">
+                    <Form.Control onChange={(e) => {
+                        console.log(e.target.value)
+                    }}
+
+                        as="select" defaultValue="Choose...">
                         <option>Choose...</option>
-                        <option>Blues</option>
-                        <option>Blue Grass</option>
-                        <option>Classical</option>
-                        <option>Country</option>
-                        <option>Electronic</option>
-                        <option>Folk</option>
-                        <option>Hip-hop</option>
-                        <option>Jazz</option>
-                        <option>New age</option>
-                        <option>Reggae</option>
-                        <option>Latin</option>
-                        <option>Rap</option>
-                        <option>Rock</option>
-                        <option>Pop/Rock</option>
-                        <option>International</option>
-                        
+                        <option value="blues">Blues</option>
+                        <option value="grass" >Blue Grass</option>
+                        <option value="classical" >Classical</option>
+                        <option value="counrty" >Country</option>
+                        <option value="electronic">Electronic</option>
+                        <option value="newage" >New age</option>
+                        <option value="folk" >Folk</option>
+                        <option value="jazz" >Jazz</option>
+                        <option value="reggae" >Reggae</option>
+                        <option value="hip"  >Hip-hop</option>
+                        <option value="latin" >Latin</option>
+                        <option value="rap" >Rap</option>
+                        <option value="rock" >Rock</option>
+                        <option value="pop" >Pop/Rock</option>
+                        <option value="inter" >International</option>
+                     
                         
                     </Form.Control>
+                
                 </Form.Group>
                 <br></br>
 
@@ -86,9 +112,12 @@ import Container from 'react-bootstrap/Container';
                 
                     <Form.Group as={Col} controlId="formGridState">
                         <Form.Label>Location by State</Form.Label>
-                        <Form.Control as="select" defaultValue="Choose...">
+                        <Form.Control onChange={(e) => {
+                            console.log(e.target.value)
+                        }}
+                            as="select" defaultValue="Choose...">
                             <option>Choose...</option>
-                            <option>Choose...</option>
+                        
                             <option>Alabama</option>
                             <option>Alaska</option>
                             <option>Arizona</option>
@@ -99,6 +128,7 @@ import Container from 'react-bootstrap/Container';
                             <option>Delaware</option>
                             <option>Florida</option>
                             <option>...</option>
+                      
 
                         </Form.Control>
                     </Form.Group>
@@ -113,8 +143,13 @@ import Container from 'react-bootstrap/Container';
                 </Form.Group> 
 
                 <br></br>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit"
+                    onClick={(e) => {
+                        console.log("heelo",e)
+                    }} 
+                >
                     Submit Musician Search
+                     
   </Button>
             </Form>
         </div>
