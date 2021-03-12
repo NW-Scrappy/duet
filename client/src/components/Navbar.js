@@ -1,4 +1,12 @@
 import React from "react"
+
+
+import Nav from "react-bootstrap/Nav"
+import NavDropdown from "react-bootstrap/NavDropdown"
+import Form from "react-bootstrap/Form"
+import Button from 'react-bootstrap/Button';
+import FormControl from "react-bootstrap/FormControl"
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-info">
@@ -20,13 +28,13 @@ function Navbar() {
             <a className="nav-link" href="/Dashboard">Dashboard</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/Profile">Profile</a>
+            <a className="nav-link" href="/newuser">New User</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/BandSearch">I need a band!</a>
+              <a className="nav-link" href="/postband">I need a Musician!</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/MusicianSearch">I need a Musician!</a>
+            <a className="nav-link" href="/MusicianSearch">I need a Band!</a>
           </li>
         </ul>
       </nav>
