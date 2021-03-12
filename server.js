@@ -18,57 +18,78 @@ app.use(express.json());
 app.get("/", (req, res) => res.send("index"));
 
 
-
-  // Find all bands and return them to the user with res.json
-  app.get("/api/band", function (req, res) {
+// Get all bands and return them to the user with res.json
+app.get("/api/bands", function (req, res) {
     db.Band.findAll({})
       .then(function (dbBand) {
         res.json(dbBand);
       });
-
   });
 
-app.get("/api/band/:id", function (req, res) {
-  // Find one Band with the id in req.params.id and return them to the user with res.json
-  db.Band.findOne({
-    where: {
-      id: req.params.id
+  //Get bands searching for requested instrument 
+  app.get("/api/bands/:instrument", function (req, res) {
+    if (req.params.instrument) {
+      // Display the JSON for ONLY that character.
+      console.log(req.params.instrument)
+      db.Band.findAll({
+        where: {
+          instrument_seeking: req.params.instrument
+        }
+      }).then(function (dbBand) {
+        return res.json(dbBand);
+      });
+      
     }
-  }).then(function (dbBand) {
-    res.json(dbBand);
-  });
-});
-
-app.get("/api/:instrument", function (req, res) {
-  if (req.params.instrument) {
-    // Display the JSON for ONLY that character.
-
-    db.Band.findAll({
+  })
+  // Get band with the request id and return them with res.json
+  app.get("/api/bandID/:id", function (req, res) {
+    db.Band.findOne({
       where: {
-        instrument_seeking: req.params.instrument
+        id: req.params.id
       }
     }).then(function (dbBand) {
-      return res.json(dbBand);
+      res.json(dbBand);
     });
-    // } else {
-    //     Band.findAll({
-    //         where: {
-    //             instrument_seeking: req.params.band
-    //         }
-    //     }).then(function (dbBand) {
-    //         return res.json(dbBand);
-    //     });
-    //     console.log("instrument", dbBand)
-    // }
+  });
+  
+  /*MUSICIAN ROUTES*/
+  // Find all musicians and return them to the user with res.json
+  app.get("/api/musicians", function (req, res) {
+  db.Musician.findAll({})
+    .then(function (dbMusicians) {
+      res.json(dbMusicians);
+    });
+});
+
+
+app.get("/api/musicians/:instrument", function (req, res) {
+  if (req.params.instrument) {
+    // Display the JSON for ONLY that character.
+    db.Musician.findAll({
+      where: {
+        instrument_playing: req.params.instrument
+      }
+    }).then(function (dbMusicians) {
+      return res.json(dbMusicians);
+    });
   }
 })
 
-
+// Get musician with the requested id and return with res.json
+app.get("/api/musicianID/:id", function (req, res) {
+db.Musician.findOne({
+  where: {
+    id: req.params.id
+  }
+}).then(function (dbMusicians) {
+  res.json(dbMusicians);
+});
+});
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB
 db.sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => {
-      console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  app.listen(PORT, () => {
+    console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
     });
   });
