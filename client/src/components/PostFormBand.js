@@ -37,13 +37,13 @@ import Container from 'react-bootstrap/Container';
                             <option>Clarinet</option>
                             <option>Saxophone</option>
                             <option>Drums</option>
-                            <option>Electric Guitar</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
-                            <option>...</option>
+                            <option>Rhythm Guitar</option>
+                            <option>Lead Guitar</option>
+                            <option>Bass Guitar</option>
+                            <option>Cello</option>
+                            <option>Fiddle/Violin</option>
+                            <option>Trumpet</option>
+                            <option>Ukelele</option>
 
                         </Form.Control>
                     </Form.Group>
