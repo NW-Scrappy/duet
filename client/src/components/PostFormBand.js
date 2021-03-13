@@ -10,10 +10,10 @@ import axios from "axios";
 
 
 const PostForm = () => {
-    const [bandName, setBandName] = useState("")
-    const [instrument, setInstrument] = useState("")
+    const [band_name, setBandName] = useState("")
+    const [instrument_seeking, setInstrument] = useState("")
 
-    const [genre, setGenre] = useState("")
+    const [band_genre, setGenre] = useState("")
     const [location, setLocation] = useState("")
 
     const handleChange = (e) => {
@@ -21,9 +21,9 @@ const PostForm = () => {
         e.preventDefault()
         axios
             .post("http://localhost:5000/api/post", {
-                bandName: bandName,
-                instrument: instrument,
-                genre: genre,
+                band_name: band_name,
+                instrument_seeking: instrument_seeking,
+                band_genre: band_genre,
                 location:location
             })
 
@@ -52,7 +52,7 @@ const PostForm = () => {
                             <Form.Label>Band Name</Form.Label>
                             <Form.Control type="text"
                                 placeholder="Band Name"
-                                // value={bandName.firstName}
+                                // value={band_name.firstName}
                                 onChange={(e) => {
                                     console.log(e.target.value)
                                     setBandName(e.target.value)
@@ -63,7 +63,7 @@ const PostForm = () => {
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridPassword">
-                            <Form.Label>Instrument Seeking</Form.Label>
+                            <Form.Label>instrument_seeking Seeking</Form.Label>
                             <Form.Control onChange={(e) => {
                                 console.log(e.target.value)
                                 setInstrument(e.target.value)
@@ -113,7 +113,7 @@ const PostForm = () => {
                     </Form.Row>
 
                     <Form.Group controlId="formGridAddress1">
-                        <Form.Label>Music Genre</Form.Label>
+                        <Form.Label>Music band_genre</Form.Label>
                         <Form.Control onChange={(e) => {
                             console.log(e.target.value)
                             setGenre(e.target.value)
