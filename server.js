@@ -1,6 +1,6 @@
 const express = require('express');
 const PORT = process.env.PORT || 5000;
-const db = require('./models');
+const db = require("./models");
 // const routes = require('./routes');
 const app = express();
 var cors = require('cors')
@@ -140,3 +140,5 @@ db.sequelize.sync({ force: false }).then(() => {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
     });
   });
+
+
