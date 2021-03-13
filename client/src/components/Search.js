@@ -10,14 +10,20 @@ import Col from "react-bootstrap/Col";
 const SearchForm = () => {
   const [dbLabel, setdbLabel] = useState("");
   const [instrument, setInstrument] = useState("");
+  const [bandList, setBandList] = useState([]);
 
   const handleChange = (e) => {
     console.log("successful search");
     e.preventDefault();
     axios
       .get("http://localhost:5000/api/" + dbLabel + "/" + instrument)
-      .then((error) => {
-        console.log(error);
+      .then((result) => {
+        const map2 = [];
+        const map1 = result.data.map((x) => x.band_name);
+        console.log(map1);
+        setBandList(...map1, map2);
+        console.log(map2);
+        console.log("bandList", bandList);
       });
   };
 
@@ -32,9 +38,7 @@ const SearchForm = () => {
           </p>
         </Container>
       </Jumbotron>
-
       <br></br>
-
       <Form className="UserForm">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Search for a Band/Musician</Form.Label>
@@ -77,21 +81,19 @@ const SearchForm = () => {
           >
             <option>Choose...</option>
 
-           
             <option value="accordian">Accordion</option>
-                                <option value="acoutic">Acoustic Guitar</option>
-                                <option value="flute"> Flute</option>
-                                <option value="clarinet">Clarinet</option>
-                                <option value="saxophone">Saxophone</option>
-                                <option value="drum">Drums</option>
-                                <option value="electric">Electric Guitar</option>
-                                <option value="nunchucks">nunchucks</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-
+            <option value="acoutic">Acoustic Guitar</option>
+            <option value="flute"> Flute</option>
+            <option value="clarinet">Clarinet</option>
+            <option value="saxophone">Saxophone</option>
+            <option value="drum">Drums</option>
+            <option value="electric">Electric Guitar</option>
+            <option value="nunchucks">nunchucks</option>
+            <option value="">...</option>
+            <option value="">...</option>
+            <option value="">...</option>
+            <option value="">...</option>
+            <option value="">...</option>
           </Form.Control>
         </Form.Group>
         <br></br>
@@ -110,6 +112,7 @@ const SearchForm = () => {
           Submit
         </Button>
       </Form>
+      {bandList}
     </div>
   );
 };

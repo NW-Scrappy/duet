@@ -1,28 +1,25 @@
-import React from "react"
-import Form from 'react-bootstrap/Form';
-import Jumbotron from 'react-bootstrap/Jumbotron';
+import React, { useState, useEffect } from "react";
+import Form from "react-bootstrap/Form";
+import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
-import Container from 'react-bootstrap/Container';
-import "../App.css"
-
-
+import Container from "react-bootstrap/Container";
+import "../App.css";
 
 const NewUserForm = () => {
-   
-    const [newUser, setNewUser] = useState("")
-    const [userPW, setUserPw] = useState("")
-  
-   return (
-     <div>
-     <Jumbotron fluid className="jumbotron">
-    <Container>
-        <h1>Duet New User Sign-Up</h1>
-        <p>
-            This is a modified jumbotron that occupies the entire horizontal space of
-            its parent.
-    </p>
-    </Container>
-</Jumbotron>
+  const [newUser, setNewUser] = useState("");
+  const [userPW, setUserPw] = useState("");
+
+  return (
+    <div>
+      <Jumbotron fluid className="jumbotron">
+        <Container>
+          <h1>Duet New User Sign-Up</h1>
+          <p>
+            This is a modified jumbotron that occupies the entire horizontal
+            space of its parent.
+          </p>
+        </Container>
+      </Jumbotron>
 
       <Form className="UserForm">
         <Form.Group controlId="formBasicEmail">
@@ -30,9 +27,9 @@ const NewUserForm = () => {
           <Form.Control type="email" placeholder="Enter username" />
           <Form.Text className="text-muted">
             We'll never share your email with anyone else.
-    </Form.Text>
+          </Form.Text>
         </Form.Group>
-          <br></br>
+        <br></br>
         <Form.Group controlId="formBasicPassword">
           <Form.Label>User Password</Form.Label>
           <Form.Control type="password" placeholder="Password" />
@@ -42,16 +39,13 @@ const NewUserForm = () => {
           <Form.Label> Confirm User Password</Form.Label>
           <Form.Control type="password" placeholder="re-enter password" />
         </Form.Group>
-  
+
         <Button className="UserBtn" variant="primary" type="submit">
           Submit
-  </Button>
+        </Button>
       </Form>
-
     </div>
-  )
-}
-
- 
+  );
+};
 
 export default NewUserForm;
