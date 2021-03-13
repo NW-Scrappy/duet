@@ -80,9 +80,9 @@ app.get("/api/musicians/:instrument", function (req, res) {
 
 
 app.post('/api/post', function (req, res) {
-  const band_name = "the beatles";
-  const instrument_seeking = "flute";
-  const band_genre = "rock"
+  const band_name =  req.body.band_name
+  const instrument_seeking = req.body.instrument_seeking
+  const band_genre = req.body.band_genre
 
   // const role = req.body.band;
   db.Band.create({
