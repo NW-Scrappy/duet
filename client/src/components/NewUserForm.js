@@ -7,12 +7,15 @@ import "../App.css"
 
 
 
- const UserForm = () => {
+const UserForm = () => {
+   
+
+  
    return (
      <div>
      <Jumbotron fluid className="jumbotron">
     <Container>
-        <h1>Duet User Login</h1>
+        <h1>Duet New User Sign-Up</h1>
         <p>
             This is a modified jumbotron that occupies the entire horizontal space of
             its parent.
