@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
 
-    var User = sequelize.define('User', {
+    var NewUser = sequelize.define('User', {
 
         UserName: {
             type: DataTypes.TEXT,
@@ -18,20 +18,6 @@ module.exports = function (sequelize, DataTypes) {
         }
     })
 
-    // User.associate = function (models) {
 
-    //     User.hasMany(models.Badge, {
-    //         foreignKey: {
-    //             defaultValue: true
-    //         }
-    //     });
-    //        User.hasMany(models.Task, {
-    //         foreignKey: {
-    //             defaultValue: true
-    //         }
-    //     });
-    // };
-
-
-    return User;
+    return NewUser;
 };

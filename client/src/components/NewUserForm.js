@@ -7,9 +7,10 @@ import "../App.css"
 
 
 
-const UserForm = () => {
+const NewUserForm = () => {
    
-
+    const [newUser, setNewUser] = useState("")
+    const [userPW, setUserPw] = useState("")
   
    return (
      <div>
@@ -53,4 +54,4 @@ const UserForm = () => {
 
  
 
-export default UserForm;
+export default NewUserForm;

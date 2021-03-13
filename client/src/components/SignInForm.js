@@ -7,7 +7,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 
 
 const SignInForm = () => {
-    // const [musician_name, setMusicianName] = useState("")
+    // const [user, setMusicianName] = useState("")
     // const [instrument_playing, setInstrument] = useState("")
 
 
