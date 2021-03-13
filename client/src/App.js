@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
 import NavBar from "./components/Navbar"
-import PostForm from "./components/PostFormBand"
+import PostFormBand from "./components/PostFormBand"
 import UserForm from "./components/NewUserForm"
 import Footer from "./components/Footer"
-import NeedaBand from "./components/NeedaBand"
+import PostFormMusician from "./components/PostFormMusician"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import SearchForm from './components/Search'
  
@@ -19,13 +19,14 @@ function App() {
 
           <Route exact path="/" />
 
-          <Route exact path="/postband" component={PostForm} />
+          <Route exact path="/postband" component={PostFormBand} />
 
           <Route exact path="/newuser" component={UserForm} />
 
-          <Route exact path="/MusicianSearch" component={NeedaBand} />
+        <Route exact path="/postmusician" component={PostFormMusician} />
 
           <Route exact path="/SearchPage" component={SearchForm} />
+
 
 
           {/* <Route exact path="/about" component={MediaCard} /> */}
