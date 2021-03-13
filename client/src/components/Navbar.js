@@ -36,6 +36,9 @@ function Navbar() {
           <li className="nav-item">
             <a className="nav-link" href="/MusicianSearch">I need a Band!</a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/SearchPage">Search</a>
+          </li>
         </ul>
       </nav>
     </nav>
