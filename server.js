@@ -18,7 +18,7 @@ app.use(cors())
 // }
 // Add routes, both API and view
 // app.use(routes);
-app.get("/", (req, res) => res.send("index"));
+
 
 
 // Get all bands and return them to the user with res.json
@@ -99,6 +99,25 @@ app.post('/api/post', function (req, res) {
     })
 });
 
+app.post('/api/musicians', function (req, res) {
+  const musician_name =  req.body.musician_name
+  const instrument_playing = req.body.instrument_playing
+  const musician_genre = req.body.musician_genre
+
+  // const role = req.body.band;
+  db.Musicians.create({
+   musician_name:musician_name,
+    instrument_playing:instrument_playing,
+    musician_genre: musician_genre,
+   
+    
+    // role: role
+  })
+    .then(dbMusician => {
+    res.json(dbMusician);
+      console.log("hello")
+    })
+});
 
 
 

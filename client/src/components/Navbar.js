@@ -31,11 +31,14 @@ function Navbar() {
             <a className="nav-link" href="/newuser">New User</a>
           </li>
           <li className="nav-item">
-              <a className="nav-link" href="/postband">I need a Musician!</a>
+              <a className="nav-link" href="/postband">Create Band Posting!</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/MusicianSearch">I need a Band!</a>
-          </li>
+            <a className="nav-link" href="/postmusician">Create Musician Posting!</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/bandsearch">I need a Band!</a>
+            </li>
         </ul>
       </nav>
     </nav>

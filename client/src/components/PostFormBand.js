@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 
-const PostForm = () => {
+const PostFormBand = () => {
     const [band_name, setBandName] = useState("")
     const [instrument_seeking, setInstrument] = useState("")
 
@@ -201,4 +201,4 @@ const PostForm = () => {
         )
     }
 
-export default PostForm
+export default PostFormBand
