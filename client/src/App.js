@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import PostFormMusician from "./components/PostFormMusician"
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import SearchForm from './components/Search'
+import SignInForm from "./components/SignInForm"
  
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
 
           <Route exact path="/postband" component={PostFormBand} />
 
-          <Route exact path="/newuser" component={UserForm} />
+        <Route exact path="/newuser" component={UserForm} />
+        <Route exact path="/usersignin" component={SignInForm} />
 
         <Route exact path="/postmusician" component={PostFormMusician} />
 

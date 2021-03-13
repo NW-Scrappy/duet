@@ -1,16 +1,14 @@
 import React from "react"
-
-
-import Nav from "react-bootstrap/Nav"
-import NavDropdown from "react-bootstrap/NavDropdown"
-import Form from "react-bootstrap/Form"
-import Button from 'react-bootstrap/Button';
-import FormControl from "react-bootstrap/FormControl"
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+// import Nav from "react-bootstrap/Nav"
+// import NavDropdown from "react-bootstrap/NavDropdown"
+// import Form from "react-bootstrap/Form"
+// import Button from 'react-bootstrap/Button';
+// import FormControl from "react-bootstrap/FormControl"
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 function Navbar() {
     return (
         <nav  className="navbar navbar-expand-lg navbar-dark bg-info">
-      <span className="navbar-brand mb-1 h1">placeholder</span>
+      <span className="navbar-brand mb-1 h1">Duet</span>
       <button
         className="navbar-toggler"
         type="button"
@@ -29,7 +27,10 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/newuser">New User</a>
-          </li>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/usersignin">User Login</a>
+            </li>
           <li className="nav-item">
               <a className="nav-link" href="/postband">Create Band Posting!</a>
           </li>

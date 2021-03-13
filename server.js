@@ -100,15 +100,16 @@ app.post('/api/post', function (req, res) {
 });
 
 app.post('/api/musicians', function (req, res) {
+  console.log("please work")
   const musician_name =  req.body.musician_name
   const instrument_playing = req.body.instrument_playing
   const musician_genre = req.body.musician_genre
 
   // const role = req.body.band;
-  db.Musicians.create({
+  db.Musician.create({
    musician_name:musician_name,
     instrument_playing:instrument_playing,
-    musician_genre: musician_genre,
+    musician_genre: musician_genre
    
     
     // role: role
