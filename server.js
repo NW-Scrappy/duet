@@ -14,8 +14,8 @@ app.use(cors())
 // Serve up static assets (usually on heroku)
 // console.log(process.env.NODE_ENV);
 // if (environment === 'production') {
-//   app.use(express.static('client/build'));
-// }
+  app.use('/',require("./routes/userRegister-api"));
+
 // Add routes, both API and view
 // app.use(routes);
 
@@ -132,6 +132,27 @@ db.Musician.findOne({
   res.json(dbMusicians);
 });
 });
+
+app.post('/api/register', function (req, res) {
+  const UserName = req.body.UserName
+  const Email = req.body.Email
+  const Password = req.body.Password
+
+  // const role = req.body.band;
+  db.User.create({
+    UserName: UserName,
+    Email: Email,
+    Password: Password,
+
+
+    // role: role
+  })
+    .then(dbUser => {
+      res.json(dbUser);
+      console.log("hello")
+    })
+});
+
 
 // Start the API server
 // ADD SEQUELIZE HERE TO CONNECT TO YOUR DB

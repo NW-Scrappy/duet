@@ -8,6 +8,7 @@ import PostFormMusician from "./components/PostFormMusician";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import SearchForm from "./components/Search";
 import SignInForm from "./components/SignInForm";
+import Dashboard from "./page-components/DashBoard"
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <NavBar />
 
         <Route exact path="/" />
-
+        <Route exact path="/Dashboard" component={Dashboard} />
         <Route exact path="/postband" component={PostFormBand} />
 
         <Route exact path="/newuser" component={NewUserForm} />
