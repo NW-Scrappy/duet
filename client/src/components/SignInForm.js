@@ -24,7 +24,7 @@ const SignInForm = () => {
                 </Container>
             </Jumbotron>
 
-            <Form className="UserForm">
+            <Form className="UserForm" action="/loginuser" method="POST">
                 <Form.Group controlId="formBasicEmail">
                     <Form.Label>User Name</Form.Label>
                     <Form.Control type="email" placeholder="Enter username" />
@@ -43,8 +43,13 @@ const SignInForm = () => {
                     <Form.Control type="password" placeholder="re-enter password" />
                 </Form.Group>
 
-                <Button className="UserBtn" variant="primary" type="submit">
-                    Submit
+                <Button href="/Dashboard" className="UserBtn" variant="primary" type="submit">
+                    User Sign-in
+  </Button>
+                <br></br>
+                <br></br>
+                <Button href="/newuser" className="UserBtn" variant="primary" type="submit">
+                  No Account? Register Now
   </Button>
             </Form>
 
