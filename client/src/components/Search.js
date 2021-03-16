@@ -15,7 +15,7 @@ const SearchForm = () => {
   const handleChange = (e) => {
     e.preventDefault();
     axios
-      .get("http://localhost:5000/api/" + dbLabel + "/" + instrument)
+      .get("https://duet-nw.herokuapp.com/api/" + dbLabel + "/" + instrument)
       .then((result) => {
         console.log("result", result);
         console.log("result data", result.data);
