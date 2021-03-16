@@ -20,7 +20,7 @@ const PostFormBand = () => {
         console.log("successful insert")
         e.preventDefault()
         axios
-            .post("http://localhost:5000/api/post", {
+            .post("https://duet-nw.herokuapp.com/api/post", {
                 band_name: band_name,
                 instrument_seeking: instrument_seeking,
                 band_genre: band_genre,
