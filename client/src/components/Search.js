@@ -13,17 +13,15 @@ const SearchForm = () => {
   const [bandList, setBandList] = useState([]);
 
   const handleChange = (e) => {
-    console.log("successful search");
     e.preventDefault();
     axios
       .get("http://localhost:5000/api/" + dbLabel + "/" + instrument)
       .then((result) => {
-        const map2 = [];
-        const map1 = result.data.map((x) => x.band_name);
-        console.log(map1);
-        setBandList(...map1, map2);
-        console.log(map2);
-        console.log("bandList", bandList);
+        console.log("result", result);
+        console.log("result data", result.data);
+        const data = result.data;
+        setBandList([...data]);
+        console.log("bandlist", bandList);
       });
   };
 
@@ -112,7 +110,12 @@ const SearchForm = () => {
           Submit
         </Button>
       </Form>
-      {bandList}
+      {bandList.map((listing) => (
+        <p>
+          {listing.band_name} + {listing.band_genre} +{" "}
+          {listing.instrument_seeking}
+        </p>
+      ))}
     </div>
   );
 };
