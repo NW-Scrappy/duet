@@ -86,7 +86,7 @@ const PostFormMusician = () => {
                                 <option>Trumpet</option>
                                 <option>Ukelele</option> */}
 
-                            <option value="accordian">Accordion</option>
+                            <option value="accordion">Accordion</option>
                             <option value="acoutic">Acoustic Guitar</option>
                             <option value="flute"> Flute</option>
                             <option value="clarinet">Clarinet</option>
@@ -121,7 +121,7 @@ const PostFormMusician = () => {
                         <option value="blues">Blues</option>
                         <option value="grass" >Blue Grass</option>
                         <option value="classical" >Classical</option>
-                        <option value="counrty" >Country</option>
+                        <option value="country" >Country</option>
                         <option value="electronic">Electronic</option>
                         <option value="newage" >New age</option>
                         <option value="folk" >Folk</option>
