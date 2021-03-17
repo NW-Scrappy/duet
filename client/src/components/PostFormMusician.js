@@ -69,37 +69,28 @@ const PostFormMusician = () => {
                             as="select" defaultValue="Choose...">
                             <option>Choose...</option>
 
-                            {/* <option>Accordion</option>
-                                <option>Acoustic Guitar</option>
-                                <option> Flute</option>
-                                <option>Clarinet</option>
-                                <option>Brass Knuckles</option>
-                                <option>Saxophone</option>
-                                <option>Drums</option>
-                                <option>Switchblade</option>
-                                <option>Rhythm Guitar</option>
-                                <option>Lead Guitar</option>
-                                <option>Bass Guitar</option>
-                                <option>Cello</option>
-                                <option>Nunchucks</option>
-                                <option>Fiddle/Violin</option>
-                                <option>Trumpet</option>
-                                <option>Ukelele</option> */}
-
-                            <option value="accordian">Accordion</option>
+                            <option value="accordion">Accordion</option>
                             <option value="acoutic">Acoustic Guitar</option>
                             <option value="flute"> Flute</option>
                             <option value="clarinet">Clarinet</option>
                             <option value="saxophone">Saxophone</option>
                             <option value="drum">Drums</option>
-                            <option value="electric">Electric Guitar</option>
+                            <option value="electric">Lead Guitar</option>
                             <option value="fight">Street-Fight</option>
-                            <option value="">...</option>
-                            <option value="">...</option>
-                            <option value="">...</option>
-                            <option value="">...</option>
-                            <option value="">...</option>
-
+                            <option value="vocals">Vocals</option>
+                            <option value="bass">Bass Guitar</option>
+                            <option value="rhythm">Rhythm Guitar</option>
+                            <option value="ukelele">Ukelele</option>
+                            <option value="tamborine">Tamborine</option>
+                            <option value="banjo">Banjo</option>
+                            <option value="cello">Cello</option>
+                            <option value="fiddle">Fiddle</option>
+                            <option value="trumpet">Trumpet</option>
+                            <option value="keyboards">Keyboards</option>
+                            <option value="xylophone">Xylophone</option>
+                            <option value="DJ">DJ</option>
+                            <option value="viola">Viola</option>
+                    
                         </Form.Control>
 
 
