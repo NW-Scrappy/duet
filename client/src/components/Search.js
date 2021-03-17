@@ -113,14 +113,7 @@ const SearchForm = () => {
           Submit
         </Button>
       </Form>
-      {bandList.map((listing) => (
-        <p>
-          {listing.band_name}  {listing.band_genre} {" "}
-          {listing.instrument_seeking}
-        </p>
-       
-      ))}
-        <SearchTable bandList={bandList} dbLabel={dbLabel}/>
+              <SearchTable bandList={bandList} dbLabel={dbLabel}/>
       
     </div>
   );
