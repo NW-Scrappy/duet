@@ -91,19 +91,20 @@ const PostFormBand = () => {
 
 
 
-                                <option value="accordian">Accordion</option>
-                                <option value="acoutic">Acoustic Guitar</option>
-                                <option value="flute"> Flute</option>
-                                <option value="clarinet">Clarinet</option>
-                                <option value="saxophone">Saxophone</option>
+                                <option value="Vocals">Vocals</option>
+                                <option value="Acoustic Guitar">Acoustic Guitar</option>
+                                <option value="Saxophone">Saxophone</option>
+                                <option value="clarinet">Trumpet</option>
+                                <option value="Base">Bass</option>
                                 <option value="drum">Drums</option>
                                 <option value="electric">Electric Guitar</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
-                                <option value="">...</option>
+                                <option value="Keyboard">Keyboard</option>
+                                <option value="Harmonica">Harmonica</option>
+                                <option value="">Tambourine</option>
+                                <option value="Cowbell">Cowbell</option>
+                                <option value="Sythesizer">Synthesizer</option>
+                                <option value="Trombone">Trombone</option>
+                                <option value="Banjo">Banjo</option>
                       
                             </Form.Control>
                        
