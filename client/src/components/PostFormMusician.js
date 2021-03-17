@@ -21,7 +21,7 @@ const PostFormMusician = () => {
         console.log("successful insert")
         e.preventDefault()
         axios
-            .post("http://localhost:5000/api/musicians", {
+            .post("https://duet-nw.herokuapp.com/api/musicians", {
                 musician_name: musician_name,
                 instrument_playing: instrument_playing,
                 musician_genre: musician_genre,

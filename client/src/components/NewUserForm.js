@@ -15,7 +15,7 @@ const NewUserForm = () => {
     console.log("successful insert")
     e.preventDefault()
     axios
-      .post("http://localhost:5000/api/register", {
+      .post("https://duet-nw.herokuapp.com/api/register", {
         UserName: UserName,
         Email:Email,
         Password: Password,

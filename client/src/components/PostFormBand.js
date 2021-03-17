@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import axios from "axios";
 
 const PostFormBand = () => {
+
   const [band_name, setBandName] = useState("");
   const [instrument_seeking, setInstrument] = useState("");
 
@@ -138,6 +139,7 @@ const PostFormBand = () => {
 
         <Form.Row>
           {/* <Form.Group as={Col} controlId="formGridCity">
+
                         <Form.Label>City</Form.Label>
                         <Form.Control as="select" defaultValue="Choose...">
                             <option>Choose...</option>

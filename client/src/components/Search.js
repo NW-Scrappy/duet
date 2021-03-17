@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SearchTable from "./SearchTable";
 import Form from "react-bootstrap/Form";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
@@ -6,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import "../App.css";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
+
 
 const SearchForm = () => {
   const [dbLabel, setdbLabel] = useState("");
@@ -15,7 +17,7 @@ const SearchForm = () => {
   const handleChange = (e) => {
     e.preventDefault();
     axios
-      .get("http://localhost:5000/api/" + dbLabel + "/" + instrument)
+      .get("https://duet-nw.herokuapp.com/api/" + dbLabel + "/" + instrument)
       .then((result) => {
         console.log("result", result);
         console.log("result data", result.data);
@@ -24,6 +26,7 @@ const SearchForm = () => {
         console.log("bandlist", bandList);
       });
   };
+
 
   return (
     <div>
@@ -112,10 +115,13 @@ const SearchForm = () => {
       </Form>
       {bandList.map((listing) => (
         <p>
-          {listing.band_name} + {listing.band_genre} +{" "}
+          {listing.band_name}  {listing.band_genre} {" "}
           {listing.instrument_seeking}
         </p>
+       
       ))}
+        <SearchTable bandList={bandList} dbLabel={dbLabel}/>
+      
     </div>
   );
 };
