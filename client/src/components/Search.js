@@ -17,7 +17,7 @@ const SearchForm = () => {
   const handleChange = (e) => {
     e.preventDefault();
     axios
-      .get("https://duet-nw.herokuapp.com/api/" + dbLabel + "/" + instrument)
+      .get("http://localhost:5000/api/" + dbLabel + "/" + instrument)
       .then((result) => {
         console.log("result", result);
         console.log("result data", result.data);
@@ -80,14 +80,14 @@ const SearchForm = () => {
             as="select"
             defaultValue="Choose..."
           >
-            <option>Choose...</option>
+            <option value="">Choose...</option>
 
             <option value="accordian">Accordion</option>
             <option value="acoutic">Acoustic Guitar</option>
             <option value="flute"> Flute</option>
             <option value="clarinet">Clarinet</option>
             <option value="saxophone">Saxophone</option>
-            <option value="drum">Drums</option>
+            <option value="drums">Drums</option>
             <option value="electric">Electric Guitar</option>
             <option value="nunchucks">nunchucks</option>
             <option value="">...</option>

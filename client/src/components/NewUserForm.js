@@ -15,7 +15,7 @@ const NewUserForm = () => {
     console.log("successful insert")
     e.preventDefault()
     axios
-      .post("https://duet-nw.herokuapp.com/api/register", {
+      .post("http://localhost:5000/api/register", {
         UserName: UserName,
         Email:Email,
         Password: Password,
@@ -93,7 +93,7 @@ const NewUserForm = () => {
           <Form.Control type="password" placeholder="re-enter password" />
         </Form.Group>
 
-        <Button className="UserBtn" variant="primary" type="submit" onClick={handleChange}>
+        <Button className="UserBtn" href="/dashboard"variant="primary" type="submit" onClick={handleChange}>
           Submit
         </Button>
       </Form>
