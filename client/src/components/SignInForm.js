@@ -18,8 +18,7 @@ const SignInForm = () => {
                 <Container>
                     <h1>Duet User Login</h1>
                     <p>
-                        This is a modified jumbotron that occupies the entire horizontal space of
-                        its parent.
+                       Welcome
     </p>
                 </Container>
             </Jumbotron>

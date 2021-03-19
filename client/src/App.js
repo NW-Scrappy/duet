@@ -17,7 +17,7 @@ function App() {
       <Router>
         <NavBar />
 
-        <Route exact path="/" />
+        <Route exact path="/"  component={SignInForm} />
         <Route exact path="/Dashboard" component={Dashboard} />
         <Route exact path="/postband" component={PostFormBand} />
 
