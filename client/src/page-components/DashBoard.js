@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 
 function Dashboard() {
   return (
-    <div>
+    <div class="Container Buttons">
       <Button
         href="/postband"
         className="bandBtn"
@@ -12,7 +12,8 @@ function Dashboard() {
         type="submit"
       >
         Create your Band Post! 
-      </Button>
+      </Button> 
+      &nbsp;&nbsp;&nbsp;&nbsp;
       <Button
         href="/SearchPage"
         className="searchBtn"
@@ -21,6 +22,7 @@ function Dashboard() {
       >
         Search for a Musician/Band!
       </Button>
+      &nbsp;&nbsp;&nbsp;&nbsp;
       <Button
         href="/postmusician"
         className="musicianBtn"
@@ -29,13 +31,6 @@ function Dashboard() {
       >
         Create your Musician Post!
       </Button>
-
-
-  
- 
-
-
-
         </div>
      
     )

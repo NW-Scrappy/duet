@@ -23,6 +23,22 @@
   text-align: center;
 }
 
+.Buttons{
+  
+}
+
+.bandBtn, .searchBtn, .musicianBtn {
+  background-color: #0DCAF0;
+  margin-bottom: auto;
+} 
+
+.Container{
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
 /* .navbar {
   background-color: #17A2B8;
 } */
