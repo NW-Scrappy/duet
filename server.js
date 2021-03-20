@@ -24,15 +24,7 @@ app.get("/api/bands", function (req, res) {
   });
 });
 
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
-//Get bands searching for requested instrument
+
 app.get("/api/bands/:instrument", function (req, res) {
   if (req.params.instrument) {
     // Display the JSON for ONLY that character.

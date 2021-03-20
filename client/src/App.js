@@ -18,7 +18,7 @@ function App() {
         <NavBar />
 
         <Route exact path="/"  component={SignInForm} />
-        <Route exact path="/Dashboard" component={Dashboard} />
+        <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/postband" component={PostFormBand} />
 
         <Route exact path="/newuser" component={NewUserForm} />
@@ -27,11 +27,10 @@ function App() {
         <Route exact path="/postmusician" component={PostFormMusician} />
 
         <Route exact path="/SearchPage" component={SearchForm} />
-
+        
         {/* <Route exact path="/about" component={MediaCard} /> */}
       </Router>
 
-      <Footer />
     </div>
   );
 }

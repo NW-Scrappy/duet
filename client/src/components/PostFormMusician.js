@@ -39,14 +39,23 @@ const PostFormMusician = () => {
     <div>
       <Jumbotron fluid className="jumbotron">
         <Container>
-          <h1  
+          <h1
             style={{
               color: "#0DCAF0",
-              fontSize: "50px",
+              fontSize: "45px",
               textShadow: "3px 3px 3px orange",
-            
-            }}>Musician Seeking Band</h1>
-          <p>Create your profile so a band can find you.</p>
+            }}
+          >
+            Musician Seeking Band
+          </h1>
+          <p
+            style={{
+              color: "#0DCAF0",
+              fontSize: "30px",
+            }}
+          >
+            Create your profile so a band can find you.
+          </p>
         </Container>
       </Jumbotron>
       <Form className="UserForm" id="create-post">
@@ -99,8 +108,6 @@ const PostFormMusician = () => {
               <option value="flute"> Flute</option>
               <option value="clarinet">Clarinet</option>
               <option value="saxophone">Saxophone</option>
-            
-             
             </Form.Control>
           </Form.Group>
 
@@ -137,14 +144,7 @@ const PostFormMusician = () => {
         </Form.Group>
         <br></br>
         <Form.Row>
-          {/* <Form.Group as={Col} controlId="formGridCity">
-                        <Form.Label>City</Form.Label>
-                        <Form.Control as="select" defaultValue="Choose...">
-                            <option>Choose...</option>
-                            <option>...</option>
-                        </Form.Control>
-                    </Form.Group> */}
-
+      
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Location by State</Form.Label>
             <Form.Control
@@ -173,13 +173,6 @@ const PostFormMusician = () => {
 
           <br></br>
         </Form.Row>
-
-        {/* <Form.Group id="formGridCheckbox">
-          <Form.Label>Upload Band Demo</Form.Label>
-          <p>
-            <input type="file"></input>
-          </p>
-        </Form.Group> */}
 
         <br></br>
         <Button
