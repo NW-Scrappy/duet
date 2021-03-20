@@ -17,22 +17,25 @@ const SearchForm = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-
-    const searchQuery =
-      "https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument;
-    axios.get(searchQuery).then((result) => {
-      console.log("result", result);
-      console.log("result data", result.data);
-      const data = result.data;
-      setBandList([...data]);
-
-      console.log("unfilteredlist", bandList);
-      console.log("name", name);
-      //filter by name of artist
-      const filtered = bandList.filter((i) => {
-        console.log(i);
-        return i.band_name == name;
-
+    // const searchQuery="https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument
+    const searchQuery="/api/" + dbLabel + "/" + instrument
+    axios
+      .get(searchQuery)
+      .then((result) => {
+        console.log("result", result);
+        console.log("result data", result.data);
+        const data = result.data;
+        setBandList([...data]);
+        
+        console.log("unfilteredlist", bandList);
+        console.log("name", name)
+        //filter by name of artist
+        const filtered = bandList.filter((i) => {
+          console.log(i)
+          return i.band_name == name;
+        });
+        setFilteredList([...filtered]);
+        console.log("filteredlist", filteredList)
 
       });
       setFilteredList([...filtered]);
