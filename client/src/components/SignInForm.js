@@ -28,15 +28,31 @@ const SignInForm = () => {
       <div>
         <Jumbotron fluid className="jumbotron">
           <Container>
-            <h1>Duet User Login</h1>
-            <p>Welcome</p>
+            <h1
+              style={{
+                color: "#0DCAF0",
+                fontSize:"60px",
+                textShadow: "3px 3px 3px orange",
+              }}
+            >
+              Duet User Login
+            </h1>
+            <p
+              style={{
+                color: " #0DCAF0",
+               fontSize:"45px",
+                textShadow: "3px 3px 3px orange",
+              }}
+            >
+              Welcome
+            </p>
           </Container>
         </Jumbotron>
 
         <Form className="UserForm" action="/loginuser" method="POST">
           <Form.Group
             onChange={(e) => {
-             setUser(e.target.value);
+              setUser(e.target.value);
               console.log(e.target.value);
             }}
             controlId="formBasicEmail"

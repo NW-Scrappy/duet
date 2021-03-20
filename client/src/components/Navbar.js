@@ -8,7 +8,16 @@ import React from "react"
 function Navbar() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-info">
-        <span className="navbar-brand mb-1 h1">Duet</span>
+        <span
+          className="navbar-brand mb-1 h1"
+          style={{
+            color: "white",
+            fontSize: "45px",
+            textShadow: "3px 3px 3px orange",
+          }}
+        >
+          Duet
+        </span>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,10 +29,15 @@ function Navbar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <nav className="collapse navbar-collapse" id="navbarSupportedContent">
+        <nav
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style={{
+            color: " white",
+            fontSize: "25px",
+          }}
+        >
           <ul className="nav navbar-nav navbar-right">
-           
-           
             <li className="nav-item">
               <a className="nav-link" href="/">
                 Home Page
