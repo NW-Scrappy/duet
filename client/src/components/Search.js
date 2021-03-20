@@ -38,9 +38,7 @@ const SearchForm = () => {
         console.log("filteredlist", filteredList)
 
       });
-      setFilteredList([...filtered]);
-      console.log("filteredlist", filteredList);
-    });
+      ;
   };
 
   return (
