@@ -18,7 +18,7 @@ const PostFormBand = () => {
     console.log("successful insert");
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/post", {
+      .post("https://duet-nw.herokuapp.com/api/bands", {
         band_name: band_name,
         instrument_seeking: instrument_seeking,
         band_genre: band_genre,
@@ -39,10 +39,18 @@ const PostFormBand = () => {
     <div>
       <Jumbotron fluid className="jumbotron">
         <Container>
-          <h1>Band Seeking Musician</h1>
+          <h1
+            style={{
+              color: "#0DCAF0",
+              fontSize: "50px",
+              textShadow: "3px 3px 3px orange",
+            
+            }}
+          >
+            Band Seeking Musician
+          </h1>
           <p>
-            This site is really for Fight Club. A underground secret fighting
-            club.
+     
           </p>
         </Container>
       </Jumbotron>
@@ -73,17 +81,16 @@ const PostFormBand = () => {
               defaultValue="Choose..."
             >
               <option>Choose...</option>
-
-              <option value="acoutic">Acoustic Guitar</option>
+              <option value="accordion">Accordion</option>
+              <option value="acoutic guitar">Acoustic Guitar</option>
               <option value="flute"> Flute</option>
               <option value="clarinet">Clarinet</option>
               <option value="saxophone">Saxophone</option>
-              <option value="drum">Drums</option>
-              <option value="electric">Lead Guitar</option>
-              <option value="fight">Street-Fight</option>
+              <option value="drums">Drums</option>
+              <option value="electric guitar">Electric Guitar</option>
               <option value="vocals">Vocals</option>
-              <option value="bass">Bass Guitar</option>
-              <option value="rhythm">Rhythm Guitar</option>
+              <option value="bass guitar">Bass Guitar</option>
+              <option value="rhythm guitar">Rhythm Guitar</option>
               <option value="ukelele">Ukelele</option>
               <option value="tamborine">Tamborine</option>
               <option value="banjo">Banjo</option>
@@ -95,12 +102,9 @@ const PostFormBand = () => {
               <option value="DJ">DJ</option>
               <option value="viola">Viola</option>
               <option value="accordian">Accordion</option>
-              <option value="acoutic">Acoustic Guitar</option>
               <option value="flute"> Flute</option>
               <option value="clarinet">Clarinet</option>
               <option value="saxophone">Saxophone</option>
-              <option value="drum">Drums</option>
-              <option value="electric">Electric Guitar</option>
             </Form.Control>
           </Form.Group>
           <br></br>
@@ -178,13 +182,13 @@ const PostFormBand = () => {
 
           <br></br>
         </Form.Row>
-
+        {/* 
         <Form.Group id="formGridCheckbox">
           <Form.Label>Upload Band Demo</Form.Label>
           <p>
             <input type="file"></input>
           </p>
-        </Form.Group>
+        </Form.Group> */}
 
         <br></br>
         <Button

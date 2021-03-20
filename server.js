@@ -78,7 +78,7 @@ app.get("/api/musicians/:instrument", function (req, res) {
   }
 });
 
-app.post("/api/post", function (req, res) {
+app.post("/api/bands", function (req, res) {
   const band_name = req.body.band_name;
   const instrument_seeking = req.body.instrument_seeking;
   const band_genre = req.body.band_genre;
