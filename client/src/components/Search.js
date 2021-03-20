@@ -127,7 +127,7 @@ const [filteredList, setFilteredList] = useState([]);
         </Form.Group>
 
 
-        <Button className="submit" variant="primary" type="submit" onClick={handleChange}>
+        <Button className="submit" variant="primary" type="submit" onClick={handleClick}>
 
           Submit
         </Button>
