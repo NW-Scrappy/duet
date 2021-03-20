@@ -45,13 +45,17 @@
   background-color: #0dcaf0;
 }
 
+.d-flex{
+  padding-top: 15px;
+}
 
 .UserForm{
   font-size: 25px;
   color: orange;
   text-shadow: 3px 3px 3px  #0DCAF0;
-  margin-left: 650px;
-  margin-right:650px;
-  float: center;
+  height: 850px;
+  width:750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
