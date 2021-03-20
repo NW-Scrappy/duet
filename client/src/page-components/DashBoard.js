@@ -4,14 +4,17 @@ import Button from "react-bootstrap/Button";
 
 function Dashboard() {
   return (
-    <div class="Container Buttons">
+    <div class="Container">
+        <h1>Welcome to Duet</h1>
+        <img src="duet.png"></img>
+    <div class="Buttons">
       <Button
         href="/postband"
         className="bandBtn"
         variant="primary"
         type="submit"
       >
-        Create your Band Post! 
+        Find a Musician! 
       </Button> 
       &nbsp;&nbsp;&nbsp;&nbsp;
       <Button
@@ -20,7 +23,7 @@ function Dashboard() {
         variant="primary"
         type="submit"
       >
-        Search for a Musician/Band!
+        Search!
       </Button>
       &nbsp;&nbsp;&nbsp;&nbsp;
       <Button
@@ -29,9 +32,13 @@ function Dashboard() {
         variant="primary"
         type="submit"
       >
-        Create your Musician Post!
+        Find a Band!
       </Button>
         </div>
+    </div>
+
+
+ 
      
     )
 

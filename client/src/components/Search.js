@@ -126,7 +126,9 @@ const [filteredList, setFilteredList] = useState([]);
           <Form.Control type="password" placeholder="re-enter password" />
         </Form.Group>
 
-        <Button variant="primary" type="submit" onClick={handleClick}>
+
+        <Button className="submit" variant="primary" type="submit" onClick={handleChange}>
+
           Submit
         </Button>
       </Form>

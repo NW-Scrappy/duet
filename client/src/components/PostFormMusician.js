@@ -184,7 +184,7 @@ const PostFormMusician = () => {
                 </Form.Group> 
 
                 <br></br>
-                <Button variant="primary" type="submit" onClick={handleChange}>
+                <Button className="submit" variant="primary" type="submit" onClick={handleChange}>
                     Submit Musician Search
   </Button>
             </Form>
