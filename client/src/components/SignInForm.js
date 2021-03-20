@@ -31,20 +31,23 @@ const SignInForm = () => {
             <h1
               style={{
                 color: "#0DCAF0",
-                fontSize:"60px",
+                fontSize: "60px",
                 textShadow: "3px 3px 3px orange",
+                float: "left",
               }}
             >
-              Duet User Login
+       
             </h1>
             <p
               style={{
                 color: " #0DCAF0",
-               fontSize:"45px",
+                fontSize: "45px",
                 textShadow: "3px 3px 3px orange",
+                textAlign: "center",
+               
               }}
             >
-              Welcome
+              Duet User Login
             </p>
           </Container>
         </Jumbotron>
