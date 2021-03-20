@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/NW-Scrappy/duet#readme",
   "engines": {
-    "node": ">=0.12"
+    "node": "14.15.0"
   },
   "dependencies": {
     "axios": "^0.21.1",
