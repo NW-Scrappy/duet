@@ -8,7 +8,6 @@ import Container from "react-bootstrap/Container";
 import axios from "axios";
 
 const PostFormBand = () => {
-
   const [band_name, setBandName] = useState("");
   const [instrument_seeking, setInstrument] = useState("");
 
@@ -29,6 +28,11 @@ const PostFormBand = () => {
       .then((error) => {
         console.log(error);
       });
+    handleClear();
+  };
+
+  const handleClear = () => {
+    document.getElementById("create-post").reset();
   };
 
   return (
@@ -42,7 +46,7 @@ const PostFormBand = () => {
           </p>
         </Container>
       </Jumbotron>
-      <Form className="UserForm">
+      <Form className="UserForm" id="create-post">
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Band Name</Form.Label>
@@ -183,7 +187,12 @@ const PostFormBand = () => {
         </Form.Group>
 
         <br></br>
-        <Button className="submit" variant="primary" type="submit" onClick={handleChange}>
+        <Button
+          className="submit"
+          variant="primary"
+          type="submit"
+          onClick={handleChange}
+        >
           Submit Musician Search
         </Button>
       </Form>
