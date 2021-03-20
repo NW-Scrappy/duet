@@ -39,7 +39,13 @@ const PostFormMusician = () => {
     <div>
       <Jumbotron fluid className="jumbotron">
         <Container>
-          <h1>Musician Seeking Band</h1>
+          <h1  
+            style={{
+              color: "#0DCAF0",
+              fontSize: "50px",
+              textShadow: "3px 3px 3px orange",
+            
+            }}>Musician Seeking Band</h1>
           <p>Create your profile so a band can find you.</p>
         </Container>
       </Jumbotron>
@@ -69,36 +75,32 @@ const PostFormMusician = () => {
             >
               <option>Choose...</option>
 
-              {/* <option>Accordion</option>
-                                <option>Acoustic Guitar</option>
-                                <option> Flute</option>
-                                <option>Clarinet</option>
-                                <option>Brass Knuckles</option>
-                                <option>Saxophone</option>
-                                <option>Drums</option>
-                                <option>Switchblade</option>
-                                <option>Rhythm Guitar</option>
-                                <option>Lead Guitar</option>
-                                <option>Bass Guitar</option>
-                                <option>Cello</option>
-                                <option>Nunchucks</option>
-                                <option>Fiddle/Violin</option>
-                                <option>Trumpet</option>
-                                <option>Ukelele</option> */}
-
               <option value="accordion">Accordion</option>
-              <option value="acoutic">Acoustic Guitar</option>
+              <option value="acoutic guitar">Acoustic Guitar</option>
               <option value="flute"> Flute</option>
               <option value="clarinet">Clarinet</option>
               <option value="saxophone">Saxophone</option>
-              <option value="drum">Drums</option>
-              <option value="electric">Electric Guitar</option>
-              <option value="fight">Street-Fight</option>
-              <option value="">...</option>
-              <option value="">...</option>
-              <option value="">...</option>
-              <option value="">...</option>
-              <option value="">...</option>
+              <option value="drums">Drums</option>
+              <option value="electric guitar">Electric Guitar</option>
+              <option value="vocals">Vocals</option>
+              <option value="bass guitar">Bass Guitar</option>
+              <option value="rhythm guitar">Rhythm Guitar</option>
+              <option value="ukelele">Ukelele</option>
+              <option value="tamborine">Tamborine</option>
+              <option value="banjo">Banjo</option>
+              <option value="cello">Cello</option>
+              <option value="fiddle">Fiddle</option>
+              <option value="trumpet">Trumpet</option>
+              <option value="keyboards">Keyboards</option>
+              <option value="xylophone">Xylophone</option>
+              <option value="DJ">DJ</option>
+              <option value="viola">Viola</option>
+              <option value="accordian">Accordion</option>
+              <option value="flute"> Flute</option>
+              <option value="clarinet">Clarinet</option>
+              <option value="saxophone">Saxophone</option>
+            
+             
             </Form.Control>
           </Form.Group>
 
@@ -172,12 +174,12 @@ const PostFormMusician = () => {
           <br></br>
         </Form.Row>
 
-        <Form.Group id="formGridCheckbox">
+        {/* <Form.Group id="formGridCheckbox">
           <Form.Label>Upload Band Demo</Form.Label>
           <p>
             <input type="file"></input>
           </p>
-        </Form.Group>
+        </Form.Group> */}
 
         <br></br>
         <Button

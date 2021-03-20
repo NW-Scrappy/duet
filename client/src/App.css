@@ -59,3 +59,11 @@
   margin-right: auto;
 }
 
+h1{
+  
+    color: "#0DCAF0";
+    font-size: "60px";
+    text-shadow: "3px 3px 3px orange";
+    float: "left",
+            
+}
