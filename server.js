@@ -12,7 +12,7 @@ app.use(cors());
 // Serve up static assets (usually on heroku)
 // console.log(process.env.NODE_ENV);
 // if (environment === 'production') {
-app.use("/", require("./routes/userRegister-api"));
+// app.use("/", require("./routes/userRegister-api"));
 
 // Add routes, both API and view
 // app.use(routes);

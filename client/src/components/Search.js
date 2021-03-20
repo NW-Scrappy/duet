@@ -17,6 +17,7 @@ const SearchForm = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
+
     const searchQuery =
       "https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument;
     axios.get(searchQuery).then((result) => {
@@ -31,6 +32,8 @@ const SearchForm = () => {
       const filtered = bandList.filter((i) => {
         console.log(i);
         return i.band_name == name;
+
+
       });
       setFilteredList([...filtered]);
       console.log("filteredlist", filteredList);
