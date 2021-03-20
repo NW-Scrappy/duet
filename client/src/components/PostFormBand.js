@@ -59,7 +59,7 @@ const PostFormBand = () => {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>instrument_seeking Seeking</Form.Label>
+            <Form.Label>Instrument needed</Form.Label>
             <Form.Control
               onChange={(e) => {
                 console.log(e.target.value);
@@ -103,7 +103,7 @@ const PostFormBand = () => {
         </Form.Row>
 
         <Form.Group controlId="formGridAddress1">
-          <Form.Label>Music band_genre</Form.Label>
+          <Form.Label>Band genre</Form.Label>
           <Form.Control
             onChange={(e) => {
               console.log(e.target.value);

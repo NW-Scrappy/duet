@@ -43,7 +43,7 @@ const PostFormMusician = () => {
                 <Container>
                     <h1>Musician Seeking Band</h1>
                     <p>
-                        This site is really for Fight Club. A underground secret fighting club. 
+                        Create your profile so a band can find you. 
     </p>
                 </Container>
             </Jumbotron>
@@ -168,7 +168,6 @@ const PostFormMusician = () => {
                             <option>Connecticut</option>
                             <option>Delaware</option>
                             <option>Florida</option>
-                            <option>Dark Alley</option>
                             <option>...</option>
 
                         </Form.Control>

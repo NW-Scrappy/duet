@@ -106,7 +106,7 @@ const [filteredList, setFilteredList] = useState([]);
             <option value="saxophone">Saxophone</option>
             <option value="drums">Drums</option>
             <option value="electric">Electric Guitar</option>
-            <option value="nunchucks">nunchucks</option>
+            <option value="Bass">Bass</option>
             <option value="">...</option>
             <option value="">...</option>
             <option value="">...</option>
@@ -117,13 +117,13 @@ const [filteredList, setFilteredList] = useState([]);
         <br></br>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>What genre of fighting?</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Label>What genre of music?</Form.Label>
+          <Form.Control type="genre" placeholder="Genre" />
         </Form.Group>
         <br></br>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label> Fight location?</Form.Label>
-          <Form.Control type="password" placeholder="re-enter password" />
+          <Form.Label>Location?</Form.Label>
+          <Form.Control type="Location" placeholder="Location" />
         </Form.Group>
 
 
