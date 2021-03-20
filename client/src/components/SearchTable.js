@@ -16,9 +16,6 @@ const useStyles = makeStyles({
 });
 
 const SearchTable = (props) => {
-  console.log("searchlist", props.bandList);
-  console.log("dblable", props.dbLabel);
-
   const classes = useStyles();
   return (
     <TableContainer component={Paper}>
