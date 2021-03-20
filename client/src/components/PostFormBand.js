@@ -42,15 +42,19 @@ const PostFormBand = () => {
           <h1
             style={{
               color: "#0DCAF0",
-              fontSize: "50px",
+              fontSize: "45px",
               textShadow: "3px 3px 3px orange",
-            
             }}
           >
             Band Seeking Musician
           </h1>
-          <p>
-     
+          <p
+            style={{
+              color: "#0DCAF0",
+              fontSize: "30px",
+            }}
+          >
+            Create your profile so a musician can find you.
           </p>
         </Container>
       </Jumbotron>
@@ -61,7 +65,6 @@ const PostFormBand = () => {
             <Form.Control
               type="text"
               placeholder="Band Name"
-              // value={band_name.firstName}
               onChange={(e) => {
                 console.log(e.target.value);
                 setBandName(e.target.value);
