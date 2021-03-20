@@ -19,7 +19,7 @@ const [filteredList, setFilteredList] = useState([]);
 
   const handleClick = (e) => {
     e.preventDefault();
-    const searchQuery="http://localhost:5000/api/" + dbLabel + "/" + instrument
+    const searchQuery="https://duet1.herokuapp.com" + dbLabel + "/" + instrument
     axios
       .get(searchQuery)
       .then((result) => {
