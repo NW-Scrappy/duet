@@ -18,7 +18,7 @@ const PostFormBand = () => {
     console.log("successful insert");
     e.preventDefault();
     axios
-      .post("https://duet-nw.herokuapp.com/api/bands", {
+      .post("https://duet1.herokuapp.com/api/bands", {
         band_name: band_name,
         instrument_seeking: instrument_seeking,
         band_genre: band_genre,
