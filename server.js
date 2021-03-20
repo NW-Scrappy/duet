@@ -4,7 +4,7 @@ const db = require("./models");
 // const routes = require('./routes');
 const app = express();
 var cors = require("cors");
-
+const path = require("path")
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -142,6 +142,14 @@ app.post("/api/register", function (req, res) {
     res.json(dbUser);
     console.log("hello");
   });
+});
+
+app.use(express.static(path.join(__dirname, "client", "build")))
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 // Start the API server
