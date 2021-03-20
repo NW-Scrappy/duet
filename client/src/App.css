@@ -44,6 +44,10 @@
   background-color: #0DCAF0;
 }
 
-/* .navbar {
-  background-color: #17A2B8;
-} */
+.UserForm{
+  font-size: 25px;
+  color: orange;
+  text-shadow: 3px 3px 3px  #0DCAF0;
+}
+
+
