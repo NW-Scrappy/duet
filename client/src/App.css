@@ -1,4 +1,4 @@
-.UserForm{
+.UserForm {
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 25px;
@@ -14,26 +14,27 @@
 }
 
 .footer {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #0DCAF0;
-  color: white;
-  text-align: center;
+  height: 120px;
+  background: #6cf;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 
-.UserBtn{
-  background-color: #0DCAF0; 
-  
+.UserBtn {
+  background-color: #0dcaf0;
 }
 
-.bandBtn, .searchBtn, .musicianBtn {
-  background-color: #0DCAF0;
+.bandBtn,
+.searchBtn,
+.musicianBtn {
+  background-color: #0dcaf0;
   margin-bottom: auto;
-} 
+}
 
-.Container{
+.Container {
   margin: 0;
   position: absolute;
   top: 30%;
@@ -41,7 +42,7 @@
 }
 
 .submit {
-  background-color: #0DCAF0;
+  background-color: #0dcaf0;
 }
 
 /* .navbar {
