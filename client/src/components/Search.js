@@ -8,14 +8,12 @@ import "../App.css";
 import axios from "axios";
 import Col from "react-bootstrap/Col";
 
-
 const SearchForm = () => {
   const [dbLabel, setdbLabel] = useState("");
   const [instrument, setInstrument] = useState("");
   const [name, setName] = useState("");
   const [bandList, setBandList] = useState([]);
-const [filteredList, setFilteredList] = useState([]);
-
+  const [filteredList, setFilteredList] = useState([]);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -38,33 +36,48 @@ const [filteredList, setFilteredList] = useState([]);
         });
         setFilteredList([...filtered]);
         console.log("filteredlist", filteredList)
-      });
-  };
 
+      });
+      setFilteredList([...filtered]);
+      console.log("filteredlist", filteredList);
+    });
+  };
 
   return (
     <div>
       <Jumbotron fluid className="jumbotron">
         <Container>
-          <h1>Start Your Search</h1>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
+          <h1
+            style={{
+              color: "#0DCAF0",
+              fontSize: "45px",
+              textShadow: "3px 3px 3px orange",
+            }}
+          >
+            Start Your Search
+          </h1>
+          <p
+            style={{
+              color: "#0DCAF0",
+              fontSize: "30px",
+            }}
+          >
+            Connect with a band or musician.
           </p>
         </Container>
       </Jumbotron>
-      <br></br>
+
       <Form className="UserForm">
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Search for a Band/Musician</Form.Label>
-          <Form.Control  placeholder="Search" 
-          onChange={(e) => {
-            console.log(e.target.value);
-            setName(e.target.value);
-          }}
+          <Form.Control
+            placeholder="Search"
+            onChange={(e) => {
+              console.log(e.target.value);
+              setName(e.target.value);
+            }}
           />
-          <Form.Text className="text-muted">
-          </Form.Text>
+          <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
 
         <br></br>
@@ -127,14 +140,16 @@ const [filteredList, setFilteredList] = useState([]);
           <Form.Control type="Location" placeholder="Location" />
         </Form.Group>
 
-
-        <Button className="submit" variant="primary" type="submit" onClick={handleClick}>
-
+        <Button
+          className="submit"
+          variant="primary"
+          type="submit"
+          onClick={handleClick}
+        >
           Submit
         </Button>
       </Form>
-              <SearchTable bandList={filteredList} dbLabel={dbLabel}/>
-      
+      <SearchTable bandList={filteredList} dbLabel={dbLabel} />
     </div>
   );
 };
