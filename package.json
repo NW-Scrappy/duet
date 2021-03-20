@@ -19,6 +19,7 @@
     "url": "https://github.com/NW-Scrappy/duet/issues"
   },
   "homepage": "https://github.com/NW-Scrappy/duet#readme",
+ "engines" : { "node" : ">=0.12" }, 
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
