@@ -19,7 +19,9 @@
     "url": "https://github.com/NW-Scrappy/duet/issues"
   },
   "homepage": "https://github.com/NW-Scrappy/duet#readme",
- "engines" : { "node" : ">=0.12" }, 
+  "engines": {
+    "node": ">=0.12"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
@@ -32,6 +34,7 @@
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "react-scripts": "^4.0.3",
     "sequelize": "^6.5.0"
   },
   "devDependencies": {
