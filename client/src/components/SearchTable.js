@@ -18,43 +18,45 @@ const useStyles = makeStyles({
 const SearchTable = (props) => {
   const classes = useStyles();
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="left">Name</TableCell>
-            <TableCell align="left">Genre</TableCell>
-            <TableCell align="left">Instrument</TableCell>
-          </TableRow>
-        </TableHead>
+    <div className="container searchtable">
+      <TableContainer component={Paper}>
+        <Table className={classes.table} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell align="left">Name</TableCell>
+              <TableCell align="left">Genre</TableCell>
+              <TableCell align="left">Instrument</TableCell>
+            </TableRow>
+          </TableHead>
 
-        <TableBody>
-          {props.bandList.map((listing) => {
-            if (props.dbLabel === "musicians") {
-              return (
-                <TableRow>
-                  <TableCell align="left">{listing.musician_name}</TableCell>
-                  <TableCell align="left">{listing.musician_genre}</TableCell>
-                  <TableCell align="left">
-                    {listing.instrument_playing}
-                  </TableCell>
-                </TableRow>
-              );
-            } else {
-              return (
-                <TableRow>
-                  <TableCell align="left">{listing.band_name}</TableCell>
-                  <TableCell align="left">{listing.band_genre}</TableCell>
-                  <TableCell align="left">
-                    {listing.instrument_seeking}
-                  </TableCell>
-                </TableRow>
-              );
-            }
-          })}
-        </TableBody>
-      </Table>
-    </TableContainer>
+          <TableBody>
+            {props.bandList.map((listing) => {
+              if (props.dbLabel === "musicians") {
+                return (
+                  <TableRow>
+                    <TableCell align="left">{listing.musician_name}</TableCell>
+                    <TableCell align="left">{listing.musician_genre}</TableCell>
+                    <TableCell align="left">
+                      {listing.instrument_playing}
+                    </TableCell>
+                  </TableRow>
+                );
+              } else {
+                return (
+                  <TableRow>
+                    <TableCell align="left">{listing.band_name}</TableCell>
+                    <TableCell align="left">{listing.band_genre}</TableCell>
+                    <TableCell align="left">
+                      {listing.instrument_seeking}
+                    </TableCell>
+                  </TableRow>
+                );
+              }
+            })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
   );
 };
 export default SearchTable;
