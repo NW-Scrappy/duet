@@ -2,6 +2,7 @@
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 25px;
+  padding-bottom: 0px;
 }
 
 .UserBtn {
@@ -45,25 +46,28 @@
   background-color: #0dcaf0;
 }
 
-.d-flex{
+.d-flex {
   padding-top: 15px;
 }
 
-.UserForm{
+.UserForm {
   font-size: 25px;
   color: orange;
-  text-shadow: 3px 3px 3px  #0DCAF0;
+  text-shadow: 3px 3px 3px #0dcaf0;
   height: 850px;
-  width:750px;
+  width: 750px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: auto;
 }
 
-h1{
-  
-    color: "#0DCAF0";
-    font-size: "60px";
-    text-shadow: "3px 3px 3px orange";
-    float: "left",
-            
+h1 {
+  color: "#0DCAF0";
+  font-size: "60px";
+  text-shadow: "3px 3px 3px orange";
+  float: "left";
+}
+.UserForm {
+  margin: auto;
+  max-height: 500px;
 }

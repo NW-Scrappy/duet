@@ -17,32 +17,45 @@ const SearchForm = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    // const searchQuery="https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument
-    const searchQuery="/api/" + dbLabel + "/" + instrument
     axios
-      .get(searchQuery)
-      .then((result) => {
-        console.log("result", result);
-        console.log("result data", result.data);
-        const data = result.data;
-        setBandList([...data]);
-        
-        console.log("unfilteredlist", bandList);
-        console.log("name", name)
-        //filter by name of artist
-        const filtered = bandList.filter((i) => {
-          console.log(i)
-          return i.band_name == name;
-        });
-        setFilteredList([...filtered]);
-        console.log("filteredlist", filteredList)
-
+      .get("https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument)
+      .then((res) => {
+        console.log("instrument", instrument);
+        console.log(res);
+        const data = res.data;
+        setBandList(data);
+        console.log("bandlist", bandList);
       });
-      ;
   };
 
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   // const searchQuery="https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument
+  //   const searchQuery="/api/" + dbLabel + "/" + instrument
+  //   axios
+  //     .get(searchQuery)
+  //     .then((result) => {
+  //       console.log("result", result);
+  //       console.log("result data", result.data);
+  //       const data = result.data;
+  //       setBandList([...data]);
+
+  //       console.log("unfilteredlist", bandList);
+  //       console.log("name", name)
+  //       //filter by name of artist
+  //       const filtered = bandList.filter((i) => {
+  //         console.log(i)
+  //         return i.band_name == name;
+  //       });
+  //       setFilteredList([...filtered]);
+  //       console.log("filteredlist", filteredList)
+
+  //     });
+  //     ;
+  // };
+
   return (
-    <div>
+    <div className="container searchbar">
       <Jumbotron fluid className="jumbotron">
         <Container>
           <h1
@@ -111,33 +124,33 @@ const SearchForm = () => {
           >
             <option value="">Choose...</option>
 
-            <option value="accordian">Accordion</option>
-            <option value="acoutic">Acoustic Guitar</option>
+            <option value="accordion">Accordion</option>
+            <option value="acoutic guitar">Acoustic Guitar</option>
             <option value="flute"> Flute</option>
             <option value="clarinet">Clarinet</option>
             <option value="saxophone">Saxophone</option>
             <option value="drums">Drums</option>
-            <option value="electric">Electric Guitar</option>
-            <option value="Bass">Bass</option>
-            <option value="">...</option>
-            <option value="">...</option>
-            <option value="">...</option>
-            <option value="">...</option>
-            <option value="">...</option>
+            <option value="electric guitar">Electric Guitar</option>
+            <option value="vocals">Vocals</option>
+            <option value="bass guitar">Bass Guitar</option>
+            <option value="rhythm guitar">Rhythm Guitar</option>
+            <option value="ukelele">Ukelele</option>
+            <option value="tamborine">Tamborine</option>
+            <option value="banjo">Banjo</option>
+            <option value="cello">Cello</option>
+            <option value="fiddle">Fiddle</option>
+            <option value="trumpet">Trumpet</option>
+            <option value="keyboards">Keyboards</option>
+            <option value="xylophone">Xylophone</option>
+            <option value="DJ">DJ</option>
+            <option value="viola">Viola</option>
+            <option value="accordian">Accordion</option>
+            <option value="flute"> Flute</option>
+            <option value="clarinet">Clarinet</option>
+            <option value="saxophone">Saxophone</option>
           </Form.Control>
         </Form.Group>
         <br></br>
-
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>What genre of music?</Form.Label>
-          <Form.Control type="genre" placeholder="Genre" />
-        </Form.Group>
-        <br></br>
-        <Form.Group controlId="formBasicPassword">
-          <Form.Label>Location?</Form.Label>
-          <Form.Control type="Location" placeholder="Location" />
-        </Form.Group>
-
         <Button
           className="submit"
           variant="primary"
@@ -147,7 +160,7 @@ const SearchForm = () => {
           Submit
         </Button>
       </Form>
-      <SearchTable bandList={filteredList} dbLabel={dbLabel} />
+      <SearchTable bandList={bandList} dbLabel={dbLabel} />
     </div>
   );
 };
