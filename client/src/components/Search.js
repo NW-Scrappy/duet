@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SearchTable from "./SearchTable";
 import Form from "react-bootstrap/Form";
 import Jumbotron from "react-bootstrap/Jumbotron";
@@ -25,34 +25,29 @@ const SearchForm = () => {
         const data = res.data;
         setBandList(data);
         console.log("bandlist", bandList);
+
+        console.log("name", name);
+        //filter by name of artist
+        if (name.length > 0) {
+          if (dbLabel == "bands") {
+            const filtered = bandList.filter(
+              (i) => i.band_name.indexOf(name) > -1
+            );
+            console.log("filtered", filtered);
+            setFilteredList([...filtered]);
+            console.log("filteredlist", filteredList);
+          } else if (dbLabel == "musicians") {
+            const filtered = bandList.filter(
+              (i) => i.musician_name.indexOf(name) > -1
+            );
+            console.log("filtered", filtered);
+            setFilteredList([...filtered]);
+            console.log("filteredlist", filteredList);
+          }
+        } else {setFilteredList(bandList)}
       });
   };
 
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   // const searchQuery="https://duet1.herokuapp.com/api/" + dbLabel + "/" + instrument
-  //   const searchQuery="/api/" + dbLabel + "/" + instrument
-  //   axios
-  //     .get(searchQuery)
-  //     .then((result) => {
-  //       console.log("result", result);
-  //       console.log("result data", result.data);
-  //       const data = result.data;
-  //       setBandList([...data]);
-
-  //       console.log("unfilteredlist", bandList);
-  //       console.log("name", name)
-  //       //filter by name of artist
-  //       const filtered = bandList.filter((i) => {
-  //         console.log(i)
-  //         return i.band_name == name;
-  //       });
-  //       setFilteredList([...filtered]);
-  //       console.log("filteredlist", filteredList)
-
-  //     });
-  //     ;
-  // };
 
   return (
     <div className="container searchbar">
@@ -160,7 +155,7 @@ const SearchForm = () => {
           Submit
         </Button>
       </Form>
-      <SearchTable bandList={bandList} dbLabel={dbLabel} />
+      <SearchTable bandList={filteredList} dbLabel={dbLabel} />
     </div>
   );
 };
